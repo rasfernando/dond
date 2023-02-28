@@ -56,3 +56,16 @@ body {
     height: 50;
     visibility: hidden;
   }
+
+  @media only screen and (max-width: 600px) {
+    .amount-container {
+      column-gap: 100px;
+
+    }
+    .amount {
+      width: 100px;
+      height: 30px;
+      font-size: small;
+      margin-bottom: 5%;
+    }
+  }
