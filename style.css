@@ -1,0 +1,58 @@
+body {
+    background-image: url(./assets/dondbg.png);
+    background-position: center;
+  }
+
+.board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .amount-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    column-gap: 700px;
+
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .amount {
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 5%;
+  }
+  
+  #amount-1, #amount-2, #amount-3, #amount-4, #amount-5, #amount-6, #amount-7, #amount-8, #amount-9, #amount-10, #amount-11 {
+    background-color: #003cff; /* blue */
+    border-top:5px solid rgb(131, 167, 250);
+    border-bottom:5px solid rgb(35, 35, 185);
+    border-left:5px solid rgb(131, 167, 250);
+    border-right:5px solid rgb(35, 35, 185);
+  }
+  
+  #amount-12, #amount-13, #amount-14, #amount-15, #amount-16, #amount-17, #amount-18, #amount-19, #amount-20, #amount-21, #amount-22 {
+    background-color: #ff0000; /* red */
+    border-top:5px solid rgb(254, 164, 164);
+    border-bottom:5px solid rgb(148, 8, 8);
+    border-left:5px solid rgb(254, 164, 164);
+    border-right:5px solid rgb(148, 8, 8);
+  }
+
+  .amount.eliminated {
+    height: 50;
+    visibility: hidden;
+  }
