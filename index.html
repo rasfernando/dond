@@ -1,51 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="./style.css">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fliss' Bday Deal or No Deal Bonanza!!</title>
-    <script>
-function eliminateAmount(amount) {
-  var element = document.getElementById('amount-' + amount);
-  element.classList.add('eliminated');
-}
-      </script>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./style.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Add the Bootstrap CSS and jQuery libraries -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      <!-- Add the JavaScript code here -->
+
+  <title>Fliss' Bday Deal or No Deal Bonanza!!</title>
+  
 </head>
+
 <body>
-    
-    <div class="board">
-        <div class="amount-container">
-          <div class="column">
-            <div class="amount" id="amount-1" onclick="eliminateAmount(1)">1p</div>
-            <div class="amount" id="amount-2" onclick="eliminateAmount(2)">10p</div>
-            <div class="amount" id="amount-3" onclick="eliminateAmount(3)">50p</div>
-            <div class="amount" id="amount-4" onclick="eliminateAmount(4)">£1</div>
-            <div class="amount" id="amount-5" onclick="eliminateAmount(5)">£5</div>
-            <div class="amount" id="amount-6" onclick="eliminateAmount(6)">£10</div>
-            <div class="amount" id="amount-7" onclick="eliminateAmount(7)">£50</div>
-            <div class="amount" id="amount-8" onclick="eliminateAmount(8)">£100</div>
-            <div class="amount" id="amount-9" onclick="eliminateAmount(9)">£250</div>
-            <div class="amount" id="amount-10" onclick="eliminateAmount(10)">£500</div>
-            <div class="amount" id="amount-11" onclick="eliminateAmount(11)">£750</div>
-          </div>
-          <div class="column">
-            <div class="amount" id="amount-12" onclick="eliminateAmount(12)">£1000</div>
-            <div class="amount" id="amount-13" onclick="eliminateAmount(13)">£3000</div>
-            <div class="amount" id="amount-14" onclick="eliminateAmount(14)">£5000</div>
-            <div class="amount" id="amount-15" onclick="eliminateAmount(15)">£10,000</div>
-            <div class="amount" id="amount-16" onclick="eliminateAmount(16)">£15,000</div>
-            <div class="amount" id="amount-17" onclick="eliminateAmount(17)">£20,000</div>
-            <div class="amount" id="amount-18" onclick="eliminateAmount(18)">£35,000</div>
-            <div class="amount" id="amount-19" onclick="eliminateAmount(19)">£50,000</div>
-            <div class="amount" id="amount-20" onclick="eliminateAmount(20)">£75,000</div>
-            <div class="amount" id="amount-21" onclick="eliminateAmount(21)">£100,000</div>
-            <div class="amount" id="amount-22" onclick="eliminateAmount(22)">£250,000</div>
-          </div>
+  <div class="board">
+    <div class="amount-container">
+      <div class="column">
+        <div class="amount" id="amount-1" onclick="eliminateAmount(1)">0.01</div>
+        <div class="amount" id="amount-2" onclick="eliminateAmount(2)">0.10</div>
+        <div class="amount" id="amount-3" onclick="eliminateAmount(3)">0.50</div>
+        <div class="amount" id="amount-4" onclick="eliminateAmount(4)">1</div>
+        <div class="amount" id="amount-5" onclick="eliminateAmount(5)">5</div>
+        <div class="amount" id="amount-6" onclick="eliminateAmount(6)">10</div>
+        <div class="amount" id="amount-7" onclick="eliminateAmount(7)">50</div>
+        <div class="amount" id="amount-8" onclick="eliminateAmount(8)">100</div>
+        <div class="amount" id="amount-9" onclick="eliminateAmount(9)">250</div>
+        <div class="amount" id="amount-10" onclick="eliminateAmount(10)">500</div>
+        <div class="amount" id="amount-11" onclick="eliminateAmount(11)">750</div>
+      </div>
+      <div class="column">
+        <div class="amount" id="amount-12" onclick="eliminateAmount(12)">1000</div>
+        <div class="amount" id="amount-13" onclick="eliminateAmount(13)">3000</div>
+        <div class="amount" id="amount-14" onclick="eliminateAmount(14)">5000</div>
+        <div class="amount" id="amount-15" onclick="eliminateAmount(15)">10000</div>
+        <div class="amount" id="amount-16" onclick="eliminateAmount(16)">15000</div>
+        <div class="amount" id="amount-17" onclick="eliminateAmount(17)">20000</div>
+        <div class="amount" id="amount-18" onclick="eliminateAmount(18)">35000</div>
+        <div class="amount" id="amount-19" onclick="eliminateAmount(19)">50000</div>
+        <div class="amount" id="amount-20" onclick="eliminateAmount(20)">75000</div>
+        <div class="amount" id="amount-21" onclick="eliminateAmount(21)">100000</div>
+        <div class="amount" id="amount-22" onclick="eliminateAmount(22)">250000</div>
+      </div>
+    </div>
+  </div>
+  <img id="bankerphone" src="./assets/bankersphone.png">
+
+  <div class="modal fade" id="offer-modal" tabindex="-1" role="dialog" aria-labelledby="offer-modal-label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="offer-modal-label">Banker's Offer</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>The Banker is offering you:</p>
+          <h2 id="offer-amount"></h2>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">No Deal</button>
+          <button type="button" class="btn btn-success" data-dismiss="modal">Deal</button>
         </div>
       </div>
-      
-</body>
-</html>
+    </div>
+  </div>
   
+</body>
+
+  <script>
+
+const image = document.getElementById("bankerphone");
+
+image.addEventListener("click", showOfferModal);
+
+   
+    function eliminateAmount(amount) {
+      var element = document.getElementById("amount-" + amount);
+      element.classList.add('eliminated');
+      eliminatedAmounts++;
+    }
+
+    function calculateOffer() {
+  var remainingAmounts = [];
+  var amounts = document.getElementsByClassName("amount");
+  for (var i = 0; i < amounts.length; i++) {
+    if (!amounts[i].classList.contains("eliminated")) {
+      remainingAmounts.push(parseInt(amounts[i].textContent));
+    }
+  }
+  var total = remainingAmounts.reduce(function(sum, amount) {
+    return sum + amount;
+  }, 0);
+  return Math.round(total / remainingAmounts.length * 0.8);
+}
+
+
+
+  function showOfferModal() {
+  // calculate the offer amount based on the remaining boxes
+  var offerAmount = calculateOffer();
+
+
+  // update the text of the offer amount in the modal
+  document.getElementById("offer-amount").textContent = "£" + offerAmount;
+
+  // show the modal
+  $("#offer-modal").modal("show");
+}
+
+  </script>
